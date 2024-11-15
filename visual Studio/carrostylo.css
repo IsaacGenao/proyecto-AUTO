@@ -1,0 +1,858 @@
+*{
+    box-sizing:border-box;
+}
+
+body,html{
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+/* fondo y botones de inicio*/
+
+.inicio{
+    height:100vh;
+    width:100%;
+    position: relative;
+}
+
+.fotoinicio{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.cont-todo-inicio{
+    z-index: 998;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.inicionoche{
+    background-image: url("pagina de autos/foto inicio de noche.png");
+    background-size: cover; 
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+#inicio1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#inicio2{
+    width: 70%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nombre{
+    font-size: 4rem;
+    font-family:Arial,sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.nombre:hover{
+    text-decoration: underline;
+   
+}
+
+.btnsobremi{
+    width: 150px;
+    height: 50px;
+    background-color: #f80516;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-family:Arial,sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnsobremi:hover{
+    background-color: white;
+    color:#f80516 ;
+    font-weight: bold;
+}
+
+/*barra de menu inicio*/
+
+.barranav{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    height:70px;
+}
+
+.boton-panel{
+    display: none;
+}
+
+.linkmenunav{
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    margin-right: 55px;
+    color:black;
+    font-weight: bold;
+}
+
+.opcionesmenu a:first-child,.opcionesmenu a:last-child{
+    display: none;
+}
+
+.linkcolor{
+    color:white; 
+}
+
+
+.botontemacolor{
+    width: 60px;
+    height: 30px;
+    background-color: black;
+    margin-right: 55px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+}
+
+.colorboton{
+    background-color: white; 
+}
+
+.indicador{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    background: linear-gradient(to bottom, rgb(239, 239, 239),rgb(155, 154, 154));
+    transform: scale(0.9);
+    transition: 0.4s;
+    transition: background.0.1s;
+    text-align: center;
+    cursor: pointer;
+}
+
+.activado{
+    left: 30px;
+    background: linear-gradient(to bottom, #444,#222);
+    transition: background.0.1s;
+}
+.icono{
+    margin-top: 1px;
+    width: 30px;
+    height: 30px;
+}
+
+/*ventana emergente sobre mi*/
+.sobremi{
+    position: fixed;
+    z-index: 999;
+    background-image: url("pagina de autos/fondosobremi.jpg");
+    background-size: cover;
+    top:1;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform.3s ease;
+    transform: translate(-100%,0);
+}
+
+.sobremi2{
+    transform: translate(0,0); 
+    
+}
+
+
+#contenedorbtn{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 50px;
+    background-color: #6c311c;
+   align-items: center;
+    
+}
+.cerrar{
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.cerrar:hover{
+    font-size: 38px;
+    transition: font-size.1s;
+}
+
+.desplegable{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#perfil{
+    max-width: 260px;
+    min-width: 150px;
+    max-height: 280px;
+    min-height: 190px;
+}
+
+#contenedor_Parrafo{
+    background-color:rgba(221, 212, 212, 0.9);
+    max-width:540px;
+    min-width: 300px;
+    max-height:640px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contenedor_Parrafo2{
+    width: 80%;
+    height: 65%;
+    margin-top: -50px;
+}
+
+span h1 {
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 2.2rem;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+span h3 {
+    margin: 0;
+    font-size: 1.2.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:100;
+    text-decoration: underline;
+}
+
+#contenedortitulos{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+#contenedor_info{
+    width: 100%;
+    height: 60%;
+}
+#contenedor_info P{
+ text-align: justify;
+ font-size: 1.1rem;
+ font-family: Helvetica, sans-serif;
+}
+
+#contenedor_info P span{
+    color: #e58f05;
+}
+
+
+
+/*seccion 2 mejores autos deportivos*/
+.seccion1{
+    background-image: url("pagina de autos/imagencarroscorriendoymontaña.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 170vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.todasletras{
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.contletras{
+    display: flex;
+    flex-direction: row; 
+    max-width: 650px;
+}
+
+.letras{
+margin-right: 100%;
+max-width: 100%;
+min-height: auto;
+}
+
+
+
+/*seccion modelos*/
+.seccion2{
+   background: url("pagina de autos/carretera2.jpg");
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.fondonegro{
+    background: url("pagina de autos/carretera2 negro.jpg");
+    transition: backgound.2s;
+    background-size: cover;
+}
+
+.cont-texto-modelos{
+    width: 900px;
+    height: 155px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-modelo{
+    height: 140px;
+    filter: drop-shadow(10px 10px 8px white);
+}
+
+.cont-btns-carrusel{
+    width: 900px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.cont-bton-right{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+
+.cont-bton-left{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.botones-modelos{
+    font-size: 30px;
+    font-family: monospace;
+    font-weight: bold;
+    height: 80px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(155, 155, 155);
+    color: black;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    opacity: 70%;
+    z-index: 997;
+}
+
+
+.botones-modelos:hover{
+    background-color: #000;
+    transition: background-color.2s;
+    color: white;
+}
+
+.botones-modelos-dark{
+    background-color: #000;
+    color: #222;
+}
+
+.botones-modelos-dark:hover{
+    background-color: #fff;
+    color: #222;
+    transition: all 2s;
+}
+
+.cont-carrusel-completo{
+    overflow: hidden;
+    width: 100%;
+    height:100%;
+}
+
+.cont-carrusel-carros{
+    width: 100%;
+    height:100%;
+    display: flex;
+    
+}
+
+.cont-texto-carros{
+    width: 100%;
+    height:100%;
+    display: flex;
+}
+
+.cont-texto{
+    width: 400px; 
+    height: 430px;
+    background-color: rgba(250, 234, 214,0.7);
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont-texto p{
+    text-align: justify;
+    height: 250px;
+    font-size: 20px;
+    width: 310px;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.titulos-modelos{
+    height: 100px;
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+.titulos-modelos h2{
+    font-size: 40px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.titulos-modelos h3{ 
+    font-size: 25px;
+    font-weight:bold;
+    margin: 0;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+   }
+
+   .corvette h3{
+    background-color: #d99004;
+   }
+
+   .maserati h3{
+    background-color: #c00606;
+   }
+
+   .bugatti h3{
+    background-color: black;
+   }
+
+   .ferrari h3{
+    background-color: rgb(126, 135, 137);
+   }
+
+   .ford,.astonmartin{
+    width: 350px;
+   }
+
+   .ford h3{
+    background-color:#d96004;
+   }
+
+   .dodge h3{
+    background-color: rgb(4, 4, 105);
+    color: white ;
+   }
+
+   .lambo h3{
+    background-color: rgb(254, 3, 99);
+   }
+
+   .mclaren h3{
+    background-color: rgb(250, 221, 3);
+    color: #000;
+   }
+
+   .astonmartin h3{
+    background-color: rgb(126, 135, 137);
+    color: black;
+   }
+
+.imgcont{
+    width: 500px;
+    height: 430px;
+    border-radius: 0 20px 20px 0;
+}
+
+/*seccion contacto*/
+.seccion3{
+   background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    
+}
+
+.logo02{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    
+}
+#logo2{
+    width: 300px;
+    animation-name: luz-animada-logo;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes luz-animada-logo{
+    0%{
+        filter: none;
+    }
+
+    100%{
+        filter: drop-shadow(3px 2px 10px white);
+    }
+}
+.contactos{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     align-items:flex-end;
+     width: 350px;
+     height: 30%;
+     margin: 0;
+}
+
+.cont-contactos{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cont-contactos:hover{
+    background-color: #ffffff;
+    box-shadow:  4px 2px 20px rgb(2, 44, 64);
+}
+
+.contact{
+    width: 35px;
+    height: 35px;
+}
+
+.derechosdeautor{
+    color: black;
+    height: 10%;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+@media screen and (min-width:300px) and (max-width:700px) and (orientation:portrait){
+    .sobremi{
+        overflow-y:scroll;
+    }
+
+    .cont-todo-inicio{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .fotoinicio-noche{
+        visibility: hidden;
+    }
+
+    .botontemacolor{
+        display: none;
+    }
+
+    .boton-panel{
+        display: block;
+        
+    }
+    .opcionesmenu a:first-child,.opcionesmenu a:last-child{
+        display: block;
+    }
+
+
+    .cont-todo-inicio{
+        z-index: 998;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .barra-hamburguesa{
+       
+        height: 65px;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        position: fixed;
+        padding: 0.5%;
+        top: 0;
+        z-index: 999;
+    }
+    
+    .linkmenunav{
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        color: aliceblue;
+    }
+    
+    .linkmenunav:hover{
+        background-color: rgb(231, 156, 58);
+    }
+
+
+    .menu-nav{
+        background: linear-gradient(0deg, rgba(0,51,199,1) 30%, rgba(0,179,209,1) 100%);
+        display: flex;
+        align-items: center;
+        width: 60%;
+        height: 100%;
+        position: fixed;
+        z-index: 997;
+        top: 1;
+        right: 0;
+        bottom: 0;
+        opacity: 95%;
+        transform: translate(150%,0);
+    }
+
+   
+
+    .panel_activado{
+        transform: translate(0,0);
+
+        }
+
+    .opcionesmenu{
+        width: 100%;
+        min-height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+    }
+   
+
+    .texto-modelo{
+        height: 90px;
+    }
+
+    .titulos-modelos h2{
+        font-size: 30px;
+    }
+    
+    .titulos-modelos h3{ 
+        font-size: 15px;
+       }
+
+       .cont-texto p{
+        height: 240px;
+        width: 330px;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+
+    .cont-btns-carrusel{
+        width: 350px;
+        height: 600px;
+        display: flex;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .cont-texto-carros{
+        width: 100%;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .cont-texto{
+        width: 100%; 
+        height: 50%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .imgcont{
+    width: 350px;
+    height: 50%;
+    border-radius: 0 0 20px 20px;
+    }
+
+    .botones-modelos{
+        font-size: 12px;
+        height: 70px;
+        width: 10px;
+    }
+}
+
+@media screen and (min-width:631px) and (max-width:900px) and (orientation:portrait){
+    
+    .cont-btns-carrusel{
+        width: 375px;
+        height: 700px;
+        display: flex;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .cont-texto-carros{
+        width: 100%;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .cont-texto{
+        width: 100%; 
+        height: 50%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .imgcont{
+    width: 375px;
+    height: 50%;
+    border-radius: 0 0 20px 20px;
+    }
+
+    .botones-modelos{
+        font-size: 12px;
+        height: 70px;
+        width: 10px;
+    }
+}
+
+@media screen and (min-width:620px) and (max-width:900px) and (orientation:landscape){
+
+    .cont-texto-modelos{
+        display: none;
+    }
+   .sobremi{
+    overflow-y: scroll;
+   }
+
+    .cont-btns-carrusel{
+        width: 700px;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        
+    }
+
+    
+
+    .imgcont{
+        width: 400px;
+        height: 350px;
+    }
+
+    .ford h2,.astonmartin h2{
+        font-size: 20px;
+    }
+
+    .titulos-modelos h2{
+        font-size: 25px;
+    }
+    
+    .titulos-modelos h3{ 
+        font-size: 15px;
+       }
+
+    .cont-texto p{
+        font-size: 16px;
+        width: 200px; 
+        height: 430px;
+    }
+
+    #perfil{
+        display: none;
+    }
+
+    #contenedor_Parrafo{
+        min-width: 300px;
+        height:300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #contenedor_Parrafo2{
+        height: 80%;
+        margin-top: 0;
+    }
+
+    #contenedor_Parrafo h1{
+        margin-top: 0;
+        font-size: 25px;
+    }
+
+    #contenedor_Parrafo p{
+        font-size: 15px;
+    }
+}
+
+
+

@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont-boton-dark-light{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color:midnightblue;
+}
+
+.color{
+    background-color: darkslategrey;;
+}
+
+.dark{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(0, 0, 0) ;
+    width: 80px;
+    height: 40px;
+    margin-right: 30px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.light{
+ background-color:rgb(255, 255, 255) ;
+}
+
+.indicador{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background:linear-gradient(to bottom, rgb(239, 239, 239),rgb(155, 154, 154)); 
+    border-radius: 30px;
+    transform: scale(0.9);
+    transition: 0.4s;
+    transition: background.0.1s;
+    text-align: center;
+}
+
+.activado{
+    left: 40px;
+    background: linear-gradient(to bottom, #444,#222);
+    transition: background.0.1s;
+}
+
+.icono{
+    margin-top: 1.3px;
+    width: 40px;
+    height: 40px;
+}
+
+.contenedor-carrusel{
+    display: flex;
+    flex-direction: row;
+}
+main{
+    width: 100%;
+    height: 100%;
+    background-color:midnightblue; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    width: 550px;
+    height: 501px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.contenedor-botones{
+    height: 501px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+article{
+    width: 550px;
+    display: flex;
+    flex-direction: row;
+    transform: translateX(0);
+    
+}
+
+.carretera{
+    filter: grayscale(100%);
+}
+
+.carros{
+    width: 550px;
+}
+
+.botones{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(187, 187, 187);
+    margin: 10px;
+    color: black;
+    transition: color.3s ease;
+    cursor: pointer;
+}
+
+.botones:hover{
+ background-color: black;
+ color: white;
+ transition: font-size.1s ease-out;
+ font-size: 24.5px;
+ font-weight: 100;
+}

@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header{
+    display: flex;
+    min-height: 75px;
+    align-items: center;
+    padding: 10px;
+    background-image: linear-gradient(to right, rgb(10, 60, 199),rgb(0, 110, 255));
+     /*para separar la barra del logo*/
+}
+nav a{
+    
+    padding-right: 10px;
+}
+nav a:hover{
+    color: white;
+}
+a{
+    text-decoration:none ;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    color: rgb(245, 235, 235);
+   
+}
+h2{
+    margin-right: 30px;
+}
+img{
+   height: 90px;
+   margin-right: 20px; 
+}
+
+@media (max-width:700px) {
+    header{
+        flex-direction: column;
+    }
+   nav {padding: 10px 0px;}
+}

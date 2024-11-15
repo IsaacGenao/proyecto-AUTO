@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%; width: 100%; margin: 0;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height: 100%; width: 100%; margin: 0" >
+    <div class="contenedor" style="display:flex;justify-content: center; align-items: center; width: 100%; height: 100%; background-color: aqua;"  >
+
+        <div class="cuentaregresiva">
+
+        </div>
+    </div>
+    <script>
+        function cuentaregresiva(reloj,fechaproxima) {
+            
+            const $cuentaregresiva=document.querySelector(reloj),
+            tiemporegresivo=new Date(fechaproxima).getTime();
+            
+            $cuentaregresiva.style.fontSize='3rem';
+            $cuentaregresiva.style.fontFamily='arial';
+            
+                 setInterval(() => {
+                     let ahora=new Date().getTime(),
+                     resultado= tiemporegresivo-ahora,
+                     dias=("0"+Math.floor(resultado/(1000*60*60*24))).slice(-2),
+                     horas=("0"+Math.floor((resultado%((1000*60*60*24))/(1000*60*60)))).slice(-2),
+                     minutos=("0"+Math.floor((resultado%((1000*60*60))/(1000*60)))).slice(-2),
+                     segundos=("0"+Math.floor((resultado%((1000*60))/(1000)))).slice(-2);
+                     
+                     if(minutos==00){
+                        $cuentaregresiva.innerHTML=`<h3>${segundos}:SEGUNDOS</h3>`;
+                     }
+                    
+                     else if(horas==0 && minutos==01){
+                        $cuentaregresiva.innerHTML=`<h3>${minutos}:MINUTO ${segundos}:SEGUNDOS</h3>`;
+                     }
+
+                     else if(horas==0){
+                        $cuentaregresiva.innerHTML=`<h3>${minutos}:MINUTOS ${segundos}:SEGUNDOS</h3>`;
+                     }
+
+                     else if (dias==0 && horas==01){
+                         $cuentaregresiva.innerHTML=`<h3>${horas}:HORA ${minutos}:MINUTOS ${segundos}:SEGUNDOS</h3>`;
+                     }
+
+                     else if (dias==0){
+                         $cuentaregresiva.innerHTML=`<h3>${horas}:HORAS ${minutos}:MINUTOS ${segundos}:SEGUNDOS</h3>`;
+                     }
+                     
+                     else if(dias<0 && horas<0 && minutos<0){
+                        $cuentaregresiva.innerHTML=`<h3>FELICIDADES MI AMOR🥰​❤️‍🔥​</h3>`;
+                     }
+                     else{
+                        $cuentaregresiva.innerHTML=`<h3>${dias}:DIAS ${horas}:HORAS ${minutos}:MINUTOS ${segundos}:SEGUNDOS</h3>`;
+                     }
+                 }, 1000);
+
+        }
+
+        cuentaregresiva (".cuentaregresiva","09 02,2022 21:32:00")
+    </script>
+</body>
+</html>
+<!-- <script>
+      /*function suma(){
+          a=50;
+          b=50;
+          d=2;
+          c=(b+a)*d;
+          return c; }
+
+          let resultado= suma();
+          console.log(resultado);
+            
+          const Isaac={
+              nombre:"Victor",
+              apellido:"Genao",
+              edad:18,
+              sexo:"Masculino",
+              ocupacion:"Desarrollador web",
+              contacto:{
+                  instagram:"i.s.genao06",
+                  whatsapp:"829-559-7132",
+                  correo:"ig.genaodeaza.j@gmail.com"
+              },
+              saludar:function(){
+                  console.log(`Hola mi nombre es ${this.nombre},tengo ${this.edad} años de edad y soy ${this.ocupacion}, 
+                  puedes comunicarte conmigo en mi instagram ${this.contacto.instagram} 
+                  o a mi correo ${this.contacto.correo}`)
+              }
+          }
+          
+          try {
+              let n=409;
+              if (n%2==1){
+              throw new Error("El numero es impar")}
+              console.log("El numero es par");
+          } catch (error) {
+              console.log(error);
+          }*/
+          /*const I= [1,2,3,4,5,6,7,8,9,10];
+
+          for (let i = 0; i < I.length; i++) {
+
+              if (i%2==1)  {
+                  continue;
+              }
+              console.log(I[i]);
+
+          };*/
+
+          /*const A=[10,2,3,4,5];
+          const B=[uno,dos]=A;
+          const suma=()=> uno + dos;
+          console.log (suma());*/
+          //-----------------------------------------------
+          //prototipo
+          /*const Carro = function (Modelo,Marca,año,precio){
+              this.Modelo=Modelo;
+              this.Marca=Marca;
+              this.año=año;
+              this.precio=precio;
+          }
+          Carro.prototype.correr = function (){
+              console.log("Voy a 100km por hora");
+          }
+
+              const Carro1=new Carro("Chiron","Bugatti",2022,"USD$4,000,000");
+              const Carro2=new Carro("Aventador","Lamborgini",2020,"USD$1,500,000");
+              const Carro3=new Carro("F40","Ferrari",2015,"USD$1,000,000");
+
+              console.log(Carro1,Carro1.correr());*/
+
+              //------------------------------------------------
+              //clase y herencia
+
+             /* class vehiculo {
+                  constructor(marca,modelo,precio){
+                      this.marca=marca;
+                      this.modelo=modelo;
+                      this.precio=precio;
+                  }
+              }
+
+              class motocicleta extends vehiculo{
+                  constructor(marca,modelo,precio,color){
+                      super(marca,modelo,precio);
+                      this.color=color;
+                  }
+                  correr(){
+                      console.log("Soy una moto y corro a 100 KM/H");
+                  }
+              }
+
+              class carro extends motocicleta {
+                  constructor(marca,modelo,precio,color,estado){
+                      super(marca,modelo,precio,color);
+                      this.estado=estado;
+                  }
+                  correr(){
+                      console.log("Soy un carro y corro a 200 KM/H");
+                  }
+              }
+
+              const moto1=new motocicleta('honda','ninja','RD$ 50,000','rojo');
+              console.log(moto1,moto1.correr());
+              const carro1=new carro('toyota','corolla','RD$ 300,000',"blanco",'nuevo');
+              console.log(carro1, carro1.correr());*/
+
+              /*console.warn("esto es un error")
+              let Fecha = new Date()
+              console.log(Fecha.getDay())
+              let i= 2, a= 25;
+              console.log(Math.round(Math.random()*i
+              ));*/
+
+
+  
+  </script>-->
