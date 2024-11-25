@@ -1,0 +1,251 @@
+/*
+@font-face {
+    font-family: "PlaywriteDEGrund";
+    src: url(/Fonts/PlaywriteDEGrund-ExtraLight.ttf);
+}*/
+
+html,body{
+    
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    
+}
+ .containerhome{
+
+    font-family: "PlaywriteDEGrund";
+    font-size: 100%;
+    font-weight:900;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+.containerERROR{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section>h1#ERROR{
+    
+    font-size: 600%;
+    color: brown;
+}
+
+@keyframes ERROR {
+
+    0%{transform: scale(90%,90%);
+
+    }
+
+    100%{
+        transform: scale(100%,100%);
+    }
+    
+}
+
+#ERROR{
+    animation-name: ERROR;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.backgrount_img {
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+height: 100%;
+width: 100%;
+
+}
+
+.Gradient {
+    background: rgb(189,245,255);
+    background: linear-gradient(180deg, rgba(189,245,255,0.39539565826330536) 17%, rgba(1,116,166,0.6923144257703081) 71%);
+    height: 100%;
+    width: 100%;
+    }
+    
+.Container_Form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Container_FormII{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#Square_Form{
+width: 1000px;
+height: 600px;
+background-color: rgb(255, 255, 255);
+border-radius: 15px;
+display: flex;
+flex-direction: row;
+}
+
+.Text_Logo_Container{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.Logo_Blux_Container{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.Logo_Blux_ContainerII{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+#Logo_Blux{
+    width: 292px;
+    height: 90px;
+    transition: transform 0.5s ease-in;
+}
+
+#Logo_Blux:hover{
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+}
+
+
+
+.Inputs_Container{
+    display: flex;
+    flex-direction: row;
+    height: 30%;
+    justify-content: center;
+}
+
+.Inputs_containerII{
+    width: 70%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.Inputs_containerIII{
+    width: 100%;
+    height: 80%;
+    justify-content: space-around;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+
+
+.Inputs{
+width: 90%;
+height: 36px;
+border-radius: 20px;
+font-family: "PlaywriteDEGrund";
+border: 2px solid rgba(184, 175, 175, 1);
+justify-content: center;
+padding-left: 50px;
+padding-top: 0px;
+padding-right: 0px;
+padding-top: 0px;
+padding-bottom: 0PX;
+transition: transform 0.6s ease;
+}
+
+.Inputs:hover{
+   border-color:  rgba(93, 202, 206, 1);
+   transform: scale(1.2,1.2);
+}
+
+.Inputs:hover::placeholder{
+    color: rgba(93, 202, 206, 1);
+}
+
+Input:focus{
+   outline: none;
+   border-color: rgba(93, 202, 206, 1) ;
+   transform: scale(1.2,1.2);
+}
+
+::placeholder{
+    color: rgba(184, 175, 175, 1);
+    font-family: "PlaywriteDEGrund";
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.Container_Submit{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Container_SubmitII {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+#Sudmit_button{
+    background-color:  rgba(93, 202, 206, 1);
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-family: "PlaywriteDEGrund";
+    font-weight: bolder;
+    font-size: 16px;
+    color: white;
+}
+
+#Sudmit_button:hover{
+    background-color:  rgb(51, 141, 145);
+    cursor: pointer;
+}
+
+#Img_2_blumbox{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 15px 15px 0px;
+   
+}
+
+.Img_Container{
+ width: 40%;
+ height: 100%;
+ 
+}
